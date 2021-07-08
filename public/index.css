@@ -1,0 +1,113 @@
+body {
+	/*background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));*/
+	background: #cde9f0;
+	/*min-height: 100vh;*/
+}
+
+.itte{
+	background-color: #1fa5d959;
+	/*height: 72vh;*/
+	padding-bottom: 3em;
+}
+
+
+.todo-button i{
+	color: #138dbce0;
+}
+
+
+.todo {
+	width: 16em;
+	margin-top: 1em ;
+	/*padding: .35em .5em .35em .5em;*/
+	transition: all 0.6s ease;
+	/*margin: 0.5rem;*/
+	background: white;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn, .complete-btn {
+	background: rgba(195, 55, 100, 0.8);
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: .5rem;
+	font-size: .7rem;
+}
+
+ .complete-btn{
+ 	background: /*rgb(50, 183, 183)*/#138dbce0;
+}
+
+.todo-item {
+	padding: 0rem 0.45rem;
+}
+
+
+.fa-trash, .fa-check {
+	pointer-events: none;
+
+}
+
+
+.completed {
+	text-decoration: line-through;
+	opacity: .8;
+}
+
+.fall  {
+	transform: translateY(8.9rem) rotate(20deg);
+	opacity: 0;
+}
+
+select{
+	color: #ff6f47;
+	width: 10rem;
+	cursor: pointer;
+	padding: .46em;
+
+}
+
+.select {
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+	/*display: flex;*/
+	/*flex-direction: row-reverse;*/
+	/*flex: 1;*/
+}
+
+.select::after {
+	content: "\25BC ";
+	position: absolute;
+	background: #ff6f47;
+	/*text-align: center;*/
+	top: 0 ;
+	left: 0 ;
+	padding: 1rem;
+	/*padding-bottom: -30em;*/
+	pointer-events: none;
+	transition: all 0.3s ease-out;
+}
+
+.select:hover::after{
+	background: white;
+	color: #ff6f47;
+}
+
+
+.todo {
+	border-radius: 4px;
+}
+
+.trash-btn{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
