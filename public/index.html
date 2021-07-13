@@ -1,30 +1,39 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content='width=device-width, initial-scale=1.0'>
-	<title>todoapp</title>
+	<title>Todo Jar</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
 </head>
 <body>
 
-<main class="ite flex justify-center  ">
+<main class="ite ">
+
+	<div class="heroSec">
+		<!-- background Image --- s -->
+	</div>
 
 	<div class="itte">
 
-	<div class="flex text-white ml-auto mr-auto justify-center items-center w-99">
+	<div class="flex text-white ml-auto -mt-20 mr-auto justify-center items-center w-99 lg:-mt-28 ">
 
-	<div>
+	<div class="lg:flex lg:flex-col lg:justify-center lg:items-center">
 
-	<header class="text-center">
-		<h2 class="font-bold text-2xl">JASKON TASK APP</h2>
-	</header>
+	<form class=" text-gray-400 " >
 
-	<form class=" text-gray-700 ">
-		<div class="bg-white p-2 pt-1 pb-1 text-xl rounded">
-		<input type="text" class="todo-input ">
+		<div class="flex xmls justify-start items-center lg:items-center pt-12 ">
+		<div>
+			<div class="heroContent text-white text-2xl mb-1" style="letter-spacing: 6.56px;"><b>MY TODO</b></div>
+			<div id="date" class="text-white font-extrabold"></div>
+		</div>	
+		</div>
+
+		<div class="bg-white p-2 py-3 w-99 lg:w-98 flex justify-between px-3 text-sm rounded" style="background: hsl(235, 24%, 19%);">
+		<input type="text" class="todo-input w-72 md:text-lg" placeholder='Create a new todo...' style="background: hsl(235, 24%, 19%);">
 		<button class="todo-button cursor-pointer  " type="submit">
 		<i class="fas fa-plus-square bg-white text-xl"></i>
 		</button>
@@ -45,10 +54,9 @@
 
 	</form>
 
-	<div class="todo-container flex justify-center items-center">
+	<div class="todo-container flex justify-center rounded items-center ">
 		<ul class="todo-list list-none " >
 
-			
 		</ul>
 	</div>
 
@@ -57,6 +65,8 @@
 	</div>
 
 	</div>
+
+		<footer class="text-gray-500 font-base"><center>&copy task-jar 2021</center></footer>
 
 	</main>
 
