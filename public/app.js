@@ -14,19 +14,11 @@ const todoList = document.querySelector('.todo-list');
 document.addEventListener('DOMContentLoaded', getTodos);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
-
-// completedButton.addEventListener('click', checkStyle);	
+// checkBtn.addEventListener('click', checkStyle);	
 
 // filterOption.addEventListener('click', filterTodo);
 
 //Funtions
-
-//style chech when clicked
-	
-	function checkStyle() {
-
-		console.logger('man');
-	}
 
 function addTodo (event) {
 	//prevent form form submitting
@@ -41,11 +33,12 @@ function addTodo (event) {
 
 	//check mark btn == check btn
 
-	const completedButton = document.createElement('button'); 
-	completedButton.innerHTML = '<i class= "fas fa-check"></i>';
+	const completedButton = document.createElement('input'); 
+	completedButton.type = 'checkbox';
+	// completedButton.innerHTML = '<i class= "fas fa-check"></i>';
 	completedButton.classList.add('complete-btn');
 	todoDiv.appendChild(completedButton);
-	
+
 
 	// create li
 
@@ -60,6 +53,7 @@ function addTodo (event) {
 	trashButton.classList.add('trash-btn');
 	todoDiv.appendChild(trashButton);
 
+
 	// Add todo to local storage 
 	saveLocalTodos(todoInput.value);
 
@@ -71,8 +65,18 @@ function addTodo (event) {
 	
 }
 
+//background color of chech btn when clicked
+// document.querySelector('.complete-btn').addEventListener('click', function() {
+
+// 	console.log('man');
+
+// })
+
+
+
 function deleteCheck(e) {
 	const item = e.target;
+
 	//delete todo
 	if(item.classList[0] === 'trash-btn') {
 		const todo = item.parentElement;
@@ -97,7 +101,6 @@ function deleteCheck(e) {
 // function filterTodo(e) {
 // 	const todos = todoList.childNodes;
 	// const todo = item.parentElement;
-
 	// console.log(todos);
 // 	todos.forEach(function(todo){
 // 		switch(e.target.value ){
@@ -110,7 +113,9 @@ function deleteCheck(e) {
 // }
 
 
+
 function saveLocalTodos(todo){
+
 	//check local storage
 
 	let todos;
@@ -147,10 +152,12 @@ function getTodos() {
 
 		//check mark btn == check btn
 
-	const completedButton = document.createElement('button'); 
-	completedButton.innerHTML = '<i class= "fas fa-check"></i>';
+	const completedButton = document.createElement('input'); 
+	completedButton.type = 'checkbox';
+	// completedButton.innerHTML = '<i class= "fas fa-check"></i>';
 	completedButton.classList.add('complete-btn');
 	todoDiv.appendChild(completedButton);
+
 
 	// create li
 
@@ -192,5 +199,5 @@ function removeLocalTodos(todo) {
 const options = {weekday : 'long', month:'short', day:'numeric'};
 const showDate = document.querySelector('#date');
 const today = new Date();
-// console.log(showDate);
 showDate.innerHTML = today.toLocaleDateString('en-US', options);
+
